@@ -1,0 +1,2049 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316301F'/%3E%3Cpath d='M16 28C16 17 20 9 27 5c0 12-5 20-11 23zM16 28C16 20 12 13 5 10c1 10 5 16 11 18z' fill='none' stroke='%23EDEB5C' stroke-width='2'/%3E%3C/svg%3E"
+    />
+    <title>Verdant Agro — Premium Outdoor Materials for Trade</title>
+    <meta
+      name="description"
+      content="Verdant agro supplies premium weed control fabric and outdoor ground materials to landscapers, nurseries, farms and contractors across Punjab, India and South India. Bulk pricing, verified GSM, dispatch in 48 hours."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+      :root {
+        --green-deep: #16301f;
+        --green: #1e3d2a;
+        --green-soft: #2a4d36;
+        --yellow: #edeb5c;
+        --cream: #f3f0e3;
+        --cream-dim: rgba(243, 240, 227, 0.66);
+        --line: rgba(243, 240, 227, 0.16);
+        --mono: "JetBrains Mono", ui-monospace, monospace;
+        --serif: "Fraunces", Georgia, serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--green);
+        color: var(--cream);
+        font-family: var(--serif);
+        font-size: 17px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      ::selection {
+        background: var(--yellow);
+        color: var(--green-deep);
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+      }
+      .mono {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      /* ---------- top ticker ---------- */
+      .ticker {
+        background: var(--yellow);
+        color: var(--green-deep);
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--green-deep);
+      }
+      .ticker-track {
+        display: inline-block;
+        animation: tick 38s linear infinite;
+      }
+      .ticker span {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        padding: 0 34px;
+      }
+      @keyframes tick {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .ticker-track {
+          animation: none;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
+      /* ---------- nav ---------- */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        background: var(--green);
+        border-bottom: 1px solid var(--line);
+        transition: box-shadow 0.3s;
+      }
+      header.scrolled {
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+      }
+      .nav {
+        max-width: 1240px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 28px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+      .logo-mark {
+        width: 34px;
+        height: 34px;
+        border: 1px solid var(--cream);
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+      }
+      .logo-mark svg {
+        width: 18px;
+        height: 18px;
+      }
+      .logo-name {
+        font-family: var(--mono);
+        font-size: 15px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--cream-dim);
+        transition: color 0.2s;
+      }
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        color: var(--yellow);
+      }
+      .nav-cta {
+        border: 1px solid var(--yellow);
+        color: var(--yellow) !important;
+        padding: 10px 18px;
+      }
+      .nav-cta:hover {
+        background: var(--yellow);
+        color: var(--green-deep) !important;
+      }
+      .burger {
+        display: none;
+        background: none;
+        border: 1px solid var(--line);
+        color: var(--cream);
+        padding: 9px 12px;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        cursor: pointer;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 96px 28px 110px;
+        display: grid;
+        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+        gap: 60px;
+      }
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--yellow);
+        margin-bottom: 30px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 44px;
+        height: 1px;
+        background: var(--yellow);
+      }
+      h1 {
+        font-size: clamp(46px, 7vw, 88px);
+        font-weight: 400;
+        line-height: 1.02;
+        letter-spacing: -0.01em;
+      }
+      h1 em {
+        font-style: italic;
+        color: var(--yellow);
+        font-weight: 340;
+      }
+      .hero-sub {
+        margin: 34px 0 44px;
+        max-width: 52ch;
+        color: var(--cream-dim);
+        font-size: 18px;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        padding: 16px 28px;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition:
+          background 0.2s,
+          color 0.2s,
+          border-color 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .btn-solid {
+        background: var(--yellow);
+        color: var(--green-deep);
+      }
+      .btn-solid:hover {
+        background: var(--cream);
+      }
+      .btn-ghost {
+        border-color: var(--line);
+        color: var(--cream);
+      }
+      .btn-ghost:hover {
+        border-color: var(--yellow);
+        color: var(--yellow);
+      }
+
+      .hero-panel {
+        border: 1px solid var(--line);
+        align-self: start;
+        padding: 34px 32px;
+        background: var(--green-deep);
+      }
+      .hero-panel h2 {
+        font-size: 22px;
+        font-weight: 400;
+        font-style: italic;
+        margin-bottom: 24px;
+        color: var(--yellow);
+      }
+      .spec-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .spec-row:last-of-type {
+        border-bottom: none;
+      }
+      .spec-row dt {
+        color: var(--cream-dim);
+        font-size: 15px;
+      }
+      .spec-row dd {
+        font-family: var(--mono);
+        font-size: 13px;
+        text-align: right;
+      }
+      .hero-panel .mono-note {
+        margin-top: 20px;
+        color: var(--cream-dim);
+        font-size: 11px;
+        line-height: 1.8;
+      }
+
+      /* ---------- proof strip ---------- */
+      .strip {
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: var(--green-deep);
+      }
+      .strip-inner {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 28px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .strip-cell {
+        padding: 30px 24px;
+        border-left: 1px solid var(--line);
+      }
+      .strip-cell:first-child {
+        border-left: none;
+        padding-left: 0;
+      }
+      .strip-cell .big {
+        font-size: 34px;
+        font-style: italic;
+        color: var(--yellow);
+        line-height: 1.1;
+      }
+      .strip-cell .mono {
+        color: var(--cream-dim);
+        margin-top: 8px;
+        display: block;
+        font-size: 10.5px;
+      }
+
+      /* ---------- sections ---------- */
+      section {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 110px 28px;
+      }
+      .sec-head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 64px;
+        flex-wrap: wrap;
+      }
+      h2.title {
+        font-size: clamp(34px, 4.4vw, 54px);
+        font-weight: 400;
+        line-height: 1.08;
+      }
+      h2.title em {
+        font-style: italic;
+        color: var(--yellow);
+      }
+      .sec-head p {
+        max-width: 44ch;
+        color: var(--cream-dim);
+      }
+
+      /* ---------- materials ---------- */
+      .materials {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+      }
+      .mat {
+        background: var(--green);
+        padding: 38px 32px 34px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        transition: background 0.25s;
+        position: relative;
+      }
+      .mat:hover {
+        background: var(--green-deep);
+      }
+      .mat-visual {
+        height: 150px;
+        margin-bottom: 30px;
+        border: 1px solid var(--line);
+        position: relative;
+        overflow: hidden;
+        background:
+          repeating-linear-gradient(
+            90deg,
+            rgba(243, 240, 227, 0.06) 0 2px,
+            transparent 2px 9px
+          ),
+          repeating-linear-gradient(
+            0deg,
+            rgba(243, 240, 227, 0.05) 0 2px,
+            transparent 2px 9px
+          ),
+          var(--green-deep);
+      }
+      .mat-visual::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 4px;
+        background: var(--yellow);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s;
+      }
+      .mat:hover .mat-visual::after {
+        transform: scaleX(1);
+      }
+      .mat-visual .gsm {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        color: var(--yellow);
+        border: 1px solid var(--yellow);
+        padding: 5px 9px;
+      }
+      .mat h3 {
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      .mat h3 em {
+        font-style: italic;
+      }
+      .mat .use {
+        color: var(--cream-dim);
+        font-size: 15.5px;
+        flex-grow: 1;
+      }
+      .mat-meta {
+        margin-top: 26px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+      .mat-meta .price {
+        font-family: var(--mono);
+        font-size: 13px;
+      }
+      .mat-meta .price s {
+        color: var(--cream-dim);
+        margin-right: 8px;
+      }
+      .mat-meta a {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--yellow);
+        text-decoration: none;
+      }
+      .mat-meta a:hover {
+        text-decoration: underline;
+      }
+      .product-video {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        gap: 70px;
+        align-items: center;
+        padding-top: 0;
+      }
+      .product-video-copy p:not(.mono) {
+        color: var(--cream-dim);
+        margin-top: 22px;
+        max-width: 44ch;
+      }
+      .product-video-action {
+        min-height: 260px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--line);
+        background: var(--green-deep);
+      }
+      .video-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        place-items: center;
+        padding: 20px;
+      }
+      .video-modal.open {
+        display: grid;
+      }
+      .video-modal-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.78);
+      }
+      .video-modal-content {
+        position: relative;
+        z-index: 1;
+        width: min(50vw, 900px);
+        max-height: 90vh;
+        border: 1px solid var(--line);
+        background: var(--green-deep);
+        padding: 18px;
+      }
+      .video-modal-player {
+        width: 100%;
+        max-height: calc(90vh - 70px);
+        display: block;
+        object-fit: contain;
+      }
+      .video-modal-close {
+        display: block;
+        margin: 0 0 14px auto;
+        background: none;
+        border: 1px solid var(--line);
+        color: var(--cream);
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+      .video-modal-close:hover {
+        border-color: var(--yellow);
+        color: var(--yellow);
+      }
+
+      /* ---------- approach ---------- */
+      .approach {
+        background: var(--green-deep);
+        max-width: none;
+        padding: 0;
+      }
+      .approach-inner {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 110px 28px;
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        gap: 70px;
+      }
+      .approach-inner .lede {
+        font-size: clamp(26px, 3vw, 36px);
+        line-height: 1.25;
+        font-weight: 340;
+      }
+      .approach-inner .lede em {
+        font-style: italic;
+        color: var(--yellow);
+      }
+      .steps {
+        border-top: 1px solid var(--line);
+      }
+      .step {
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        gap: 24px;
+        padding: 30px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .step .n {
+        font-family: var(--mono);
+        font-size: 13px;
+        color: var(--yellow);
+        padding-top: 5px;
+      }
+      .step h3 {
+        font-size: 21px;
+        font-weight: 400;
+        margin-bottom: 8px;
+      }
+      .step p {
+        color: var(--cream-dim);
+        font-size: 16px;
+        max-width: 56ch;
+      }
+
+      /* ---------- calculator ---------- */
+      .calc-wrap {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        gap: 70px;
+        align-items: start;
+      }
+      .calc-copy p {
+        color: var(--cream-dim);
+        margin-top: 22px;
+        max-width: 44ch;
+      }
+      .calc {
+        border: 1px solid var(--line);
+        background: var(--green-deep);
+        padding: 40px;
+      }
+      .calc label {
+        display: block;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--cream-dim);
+        margin-bottom: 10px;
+      }
+      .calc-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+      }
+      .field input,
+      .field select {
+        width: 100%;
+        background: var(--green);
+        border: 1px solid var(--line);
+        color: var(--cream);
+        font-family: var(--mono);
+        font-size: 15px;
+        padding: 14px 16px;
+        outline: none;
+      }
+      .field input:focus,
+      .field select:focus {
+        border-color: var(--yellow);
+      }
+      .calc-out {
+        margin-top: 34px;
+        padding-top: 30px;
+        border-top: 1px solid var(--line);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+      }
+      .calc-out .cell .v {
+        font-size: 30px;
+        font-style: italic;
+        color: var(--yellow);
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+      }
+      .calc-out .cell .k {
+        font-family: var(--mono);
+        font-size: 10.5px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--cream-dim);
+        margin-top: 6px;
+      }
+      .calc-note {
+        margin-top: 24px;
+        font-size: 13px;
+        color: var(--cream-dim);
+        font-style: italic;
+      }
+
+      /* ---------- pricing tiers ---------- */
+      .tiers {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid var(--line);
+      }
+      .tiers th,
+      .tiers td {
+        padding: 20px 24px;
+        border: 1px solid var(--line);
+        text-align: left;
+      }
+      .tiers th {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--cream-dim);
+        background: var(--green-deep);
+      }
+      .tiers td {
+        font-size: 16px;
+      }
+      .tiers td .mono {
+        font-size: 13px;
+        color: var(--yellow);
+        text-transform: none;
+        letter-spacing: 0.04em;
+      }
+      .tiers tr:hover td {
+        background: var(--green-deep);
+      }
+      .tiers .save {
+        font-style: italic;
+        color: var(--yellow);
+      }
+
+      /* ---------- story ---------- */
+      .story {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        gap: 70px;
+        align-items: start;
+      }
+      .story blockquote {
+        font-size: clamp(24px, 2.8vw, 34px);
+        line-height: 1.3;
+        font-weight: 340;
+        border-left: 2px solid var(--yellow);
+        padding-left: 34px;
+      }
+      .story blockquote em {
+        font-style: italic;
+        color: var(--yellow);
+      }
+      .story .attr {
+        margin-top: 26px;
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--cream-dim);
+        padding-left: 36px;
+      }
+      .story-facts {
+        border: 1px solid var(--line);
+      }
+      .fact {
+        padding: 24px 28px;
+        border-bottom: 1px solid var(--line);
+      }
+      .fact:last-child {
+        border-bottom: none;
+      }
+      .fact h4 {
+        font-size: 18px;
+        font-weight: 400;
+        font-style: italic;
+        margin-bottom: 6px;
+      }
+      .fact p {
+        color: var(--cream-dim);
+        font-size: 15px;
+      }
+
+      /* ---------- FAQ ---------- */
+      .faq {
+        max-width: 820px;
+      }
+      .q {
+        border-bottom: 1px solid var(--line);
+      }
+      .q button {
+        width: 100%;
+        background: none;
+        border: none;
+        color: var(--cream);
+        font-family: var(--serif);
+        font-size: 20px;
+        text-align: left;
+        padding: 26px 40px 26px 0;
+        cursor: pointer;
+        position: relative;
+      }
+      .q button::after {
+        content: "+";
+        position: absolute;
+        right: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: var(--mono);
+        font-size: 20px;
+        color: var(--yellow);
+        transition: transform 0.25s;
+      }
+      .q.open button::after {
+        transform: translateY(-50%) rotate(45deg);
+      }
+      .q .a {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .q .a p {
+        color: var(--cream-dim);
+        padding: 0 0 28px;
+        max-width: 64ch;
+      }
+
+      /* ---------- quote form ---------- */
+      .quote {
+        background: var(--green-deep);
+        max-width: none;
+        padding: 0;
+      }
+      .quote-inner {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 110px 28px;
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        gap: 70px;
+      }
+      .quote-copy .mono {
+        color: var(--yellow);
+      }
+      .quote-copy h2 {
+        margin-top: 20px;
+      }
+      .quote-copy p {
+        color: var(--cream-dim);
+        margin-top: 24px;
+        max-width: 42ch;
+      }
+      .contact-lines {
+        margin-top: 40px;
+        border-top: 1px solid var(--line);
+      }
+      .contact-lines div {
+        padding: 16px 0;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .contact-lines .k {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--cream-dim);
+        padding-top: 3px;
+      }
+      .contact-lines .v {
+        font-size: 16px;
+        text-align: right;
+      }
+      form.qf {
+        border: 1px solid var(--line);
+        padding: 44px;
+        background: var(--green);
+      }
+      .qf .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+        margin-bottom: 26px;
+      }
+      .qf .row.full {
+        grid-template-columns: 1fr;
+      }
+      .qf textarea {
+        width: 100%;
+        background: var(--green-deep);
+        border: 1px solid var(--line);
+        color: var(--cream);
+        font-family: var(--serif);
+        font-size: 16px;
+        padding: 14px 16px;
+        min-height: 110px;
+        resize: vertical;
+        outline: none;
+      }
+      .qf textarea:focus {
+        border-color: var(--yellow);
+      }
+      .qf input,
+      .qf select {
+        width: 100%;
+        background: var(--green-deep);
+        border: 1px solid var(--line);
+        color: var(--cream);
+        font-family: var(--serif);
+        font-size: 16px;
+        padding: 14px 16px;
+        outline: none;
+      }
+      .qf input:focus,
+      .qf select:focus {
+        border-color: var(--yellow);
+      }
+      .qf input.err,
+      .qf select.err {
+        border-color: #e07a5f;
+      }
+      .qf .msg {
+        margin-top: 18px;
+        font-style: italic;
+        color: var(--yellow);
+        min-height: 24px;
+      }
+
+      /* ---------- footer ---------- */
+      footer {
+        border-top: 1px solid var(--line);
+      }
+      .foot {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 64px 28px 40px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 48px;
+      }
+      .foot h5 {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--cream-dim);
+        margin-bottom: 18px;
+        font-weight: 500;
+      }
+      .foot ul {
+        list-style: none;
+      }
+      .foot li {
+        margin-bottom: 10px;
+      }
+      .foot a {
+        text-decoration: none;
+        color: var(--cream);
+        font-size: 15px;
+      }
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .social-link svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+      .foot a:hover {
+        color: var(--yellow);
+      }
+      .foot .wordmark {
+        font-size: clamp(40px, 5vw, 64px);
+        font-style: italic;
+        color: var(--yellow);
+        line-height: 1;
+      }
+      .foot .tag {
+        margin-top: 14px;
+        color: var(--cream-dim);
+        font-size: 14px;
+        max-width: 30ch;
+      }
+      .legal {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 22px 28px 34px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        color: var(--cream-dim);
+      }
+      .legal span {
+        font-family: var(--mono);
+        font-size: 10.5px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      /* ---------- reveal ---------- */
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+
+      /* ---------- responsive ---------- */
+      @media (max-width: 1020px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding-top: 70px;
+        }
+        .strip-inner {
+          grid-template-columns: 1fr 1fr;
+        }
+        .strip-cell:nth-child(odd) {
+          border-left: none;
+          padding-left: 0;
+        }
+        .materials {
+          grid-template-columns: 1fr 1fr;
+        }
+        .approach-inner,
+        .calc-wrap,
+        .story,
+        .quote-inner,
+        .product-video {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+        .foot {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 680px) {
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: var(--green-deep);
+          border-bottom: 1px solid var(--line);
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 24px 28px;
+          gap: 22px;
+        }
+        .nav-links.show {
+          display: flex;
+        }
+        .burger {
+          display: block;
+        }
+        .materials {
+          grid-template-columns: 1fr;
+        }
+        .calc-grid,
+        .qf .row {
+          grid-template-columns: 1fr;
+        }
+        .calc-out {
+          grid-template-columns: 1fr;
+          gap: 26px;
+        }
+        .calc,
+        form.qf {
+          padding: 28px;
+        }
+        section {
+          padding: 80px 20px;
+        }
+        .strip-inner {
+          grid-template-columns: 1fr;
+        }
+        .strip-cell {
+          border-left: none;
+          padding-left: 0;
+        }
+        .foot {
+          grid-template-columns: 1fr;
+        }
+        .step {
+          grid-template-columns: 44px 1fr;
+        }
+        .video-modal-content {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="ticker">
+        <span
+          >Premium outdoor materials, thoughtfully sourced for Punjab,
+          India</span
+        >
+        <span>Bulk dispatch within 48 hours</span>
+        <span>Verified 90–130 GSM, batch-tested</span>
+        <span>GST invoicing for trade accounts</span>
+        <span
+          >Premium outdoor materials, thoughtfully sourced for Punjab,
+          India</span
+        >
+        <span>Bulk dispatch within 48 hours</span>
+        <span>Verified 90–130 GSM, batch-tested</span>
+        <span>GST invoicing for trade accounts</span>
+      </div>
+    </div>
+
+    <!-- nav -->
+    <header id="hdr">
+      <nav class="nav" aria-label="Main">
+        <a class="logo" href="#top">
+          <span class="logo-mark" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#F3F0E3"
+              stroke-width="1.4"
+            >
+              <path d="M12 21C12 13 15 6 21 3c0 9-4 15-9 18z" />
+              <path d="M12 21C12 15 9.5 9.5 4 7c.5 8 4 12.5 8 14z" />
+            </svg>
+          </span>
+          <span class="logo-name">Verdant Agro </span>
+        </a>
+        <button
+          class="burger"
+          id="burger"
+          aria-expanded="false"
+          aria-controls="navlinks"
+        >
+          Menu
+        </button>
+        <ul class="nav-links" id="navlinks">
+          <li><a href="#materials">Materials</a></li>
+          <li><a href="#approach">Our approach</a></li>
+          <li><a href="#pricing">Trade pricing</a></li>
+          <li><a href="#story">Our story</a></li>
+          <li><a class="nav-cta" href="#quote">Request a quote</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- hero -->
+      <div class="hero">
+        <div>
+          <p class="mono eyebrow">The ground, considered</p>
+          <h1>Protect the Soil.<br /><em>Empower the Growth.</em></h1>
+          <p class="hero-sub">
+            Verdant Agro supplies weed control fabric and ground materials to
+            landscapers, nurseries, farms and contractors — from the first layer
+            to the final line. Bulk quantities, verified specs, dispatched from
+            Punjab within 48 hours.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#materials">Explore materials</a>
+            <a class="btn btn-ghost" href="#quote">Speak with the team</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Flagship product specification">
+          <h2>Flagship: Barrier 110</h2>
+          <dl>
+            <div class="spec-row">
+              <dt>Material</dt>
+              <dd>Woven PP, UV-stabilised</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Weight</dt>
+              <dd>110 GSM</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Roll size</dt>
+              <dd>2 m × 50 m</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Field life</dt>
+              <dd>5+ years exposed</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Trade price</dt>
+              <dd>₹2,600 / roll</dd>
+            </div>
+          </dl>
+          <p class="mono mono-note">
+            Batch-tested for GSM before every dispatch. Test certificate travels
+            with the consignment.
+          </p>
+        </aside>
+      </div>
+
+      <!-- proof strip -->
+      <div class="strip">
+        <div class="strip-inner">
+          <div class="strip-cell">
+            <div class="big">340+</div>
+            <span class="mono">Trade accounts across South India</span>
+          </div>
+          <div class="strip-cell">
+            <div class="big">48 hrs</div>
+            <span class="mono">Order to dispatch, Punjab warehouse</span>
+          </div>
+          <div class="strip-cell">
+            <div class="big">110 GSM</div>
+            <span class="mono">Verified weight, never nominal</span>
+          </div>
+          <div class="strip-cell">
+            <div class="big">5 yrs</div>
+            <span class="mono">UV-stabilised field life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- materials -->
+      <section id="materials">
+        <div class="sec-head reveal">
+          <h2 class="title">Materials, <em>by the roll.</em></h2>
+          <p>
+            Every roll is weighed and batch-tested before it leaves the
+            warehouse. What's on the label is what's on the ground.
+          </p>
+        </div>
+        <div class="materials">
+          <article class="mat reveal">
+            <div class="mat-visual"><span class="gsm">90 GSM</span></div>
+            <h3>Barrier <em>90</em></h3>
+            <p class="use">
+              For nursery beds, seasonal plots and covered polyhouse floors.
+              Light to lay, easy to cut, water-permeable.
+            </p>
+            <div class="mat-meta">
+              <span class="price">₹2,600 / roll</span>
+              <a href="#quote">Get bulk quote</a>
+            </div>
+          </article>
+          <article class="mat reveal">
+            <div class="mat-visual"><span class="gsm">110 GSM</span></div>
+            <h3>Barrier <em>110</em></h3>
+            <p class="use">
+              Our flagship. Heavy-duty weed block for landscaping, orchards and
+              pathways. Holds edge under gravel and foot traffic.
+            </p>
+            <div class="mat-meta">
+              <span class="price">₹2,600 / roll</span>
+              <a href="#quote">Get bulk quote</a>
+            </div>
+          </article>
+          <article class="mat reveal">
+            <div class="mat-visual"><span class="gsm">130 GSM</span></div>
+            <h3>Barrier <em>130</em></h3>
+            <p class="use">
+              Contractor grade for driveways, under-paver membranes and
+              long-exposure agricultural runs. Maximum tear resistance.
+            </p>
+            <div class="mat-meta">
+              <span class="price">₹2,600 / roll</span>
+              <a href="#quote">Get bulk quote</a>
+            </div>
+          </article>
+          <article class="mat reveal">
+            <div class="mat-visual"><span class="gsm">Pins</span></div>
+            <h3>Ground <em>pins</em></h3>
+            <p class="use">
+              Galvanised U-pins, 6-inch, sold in cartons of 500. One carton
+              anchors roughly 150 m² of laid fabric.
+            </p>
+            <div class="mat-meta">
+              <span class="price">₹1,150 / carton</span>
+              <a href="#quote">Get bulk quote</a>
+            </div>
+          </article>
+          <article class="mat reveal">
+            <div class="mat-visual"><span class="gsm">Custom</span></div>
+            <h3>Cut-to-<em>width</em></h3>
+            <p class="use">
+              Rolls slit to your bed width — 0.6 m to 4 m — so crews stop
+              cutting on site. Minimum order 20 rolls per width.
+            </p>
+            <div class="mat-meta">
+              <span class="price">Priced on spec</span>
+              <a href="#quote">Get bulk quote</a>
+            </div>
+          </article>
+          <article class="mat reveal">
+            <div class="mat-visual"><span class="gsm">Mulch</span></div>
+            <h3>Mulch <em>film</em></h3>
+            <p class="use">
+              25–30 micron silver-black mulching film for row crops. Reflective
+              top side, moisture-holding underside.
+            </p>
+            <div class="mat-meta">
+              <span class="price">₹2,600 / roll</span>
+              <a href="#quote">Get bulk quote</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="product-video reveal"
+        aria-labelledby="product-video-title"
+      >
+        <div class="product-video-copy">
+          <p class="mono" style="color: var(--yellow)">In the field</p>
+          <h2 class="title" id="product-video-title">
+            Made for the <em>ground.</em>
+          </h2>
+          <p>
+            See Verdant Agro material in action — built to protect the soil and
+            support every growing season.
+          </p>
+        </div>
+        <div class="product-video-action">
+          <button
+            class="btn btn-solid"
+            id="videoOpen"
+            type="button"
+            aria-haspopup="dialog"
+          >
+            Watch product video
+          </button>
+        </div>
+      </section>
+
+      <div class="video-modal" id="videoModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-video-close></div>
+        <div
+          class="video-modal-content"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="product-video-title"
+        >
+          <button
+            class="video-modal-close"
+            id="videoClose"
+            type="button"
+            aria-label="Close product video"
+          >
+            Close
+          </button>
+          <video
+            class="video-modal-player"
+            controls
+            playsinline
+            preload="metadata"
+          >
+            <source src="product-video.mp4" type="video/mp4" />
+            Your browser does not support the product video.
+          </video>
+        </div>
+      </div>
+
+      <!-- approach -->
+      <div class="approach" id="approach">
+        <div class="approach-inner">
+          <div class="reveal">
+            <p class="mono" style="color: var(--yellow); margin-bottom: 26px">
+              Our approach
+            </p>
+            <p class="lede">
+              Outdoor materials for people who care how a place
+              <em>holds together</em> — from the first layer to the final line.
+            </p>
+          </div>
+          <div class="steps reveal">
+            <div class="step">
+              <span class="n">Source</span>
+              <div>
+                <h3>Mill-direct, single origin</h3>
+                <p>
+                  We buy woven PP from two mills we've audited ourselves, not
+                  from aggregators. Same looms, same yarn, every batch.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="n">Test</span>
+              <div>
+                <h3>Weighed before dispatch</h3>
+                <p>
+                  A cut sample from every batch is weighed against the labelled
+                  GSM. Under-spec fabric is rejected, not discounted.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="n">Move</span>
+              <div>
+                <h3>48-hour dispatch</h3>
+                <p>
+                  Stock lives in our Punjab warehouse, not on a supplier's
+                  promise. Orders confirmed by 2 pm move the same week, usually
+                  within two days.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="n">Back</span>
+              <div>
+                <h3>Replaced, not argued</h3>
+                <p>
+                  If a roll fails on GSM or tears within the covered period, we
+                  replace it. Your site crew shouldn't carry our risk.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- calculator -->
+      <section id="calculator">
+        <div class="calc-wrap">
+          <div class="calc-copy reveal">
+            <h2 class="title">Know your order <em>before you call.</em></h2>
+            <p>
+              Enter the area you're covering and we'll estimate rolls, pins and
+              a working budget at trade rates. Overlap allowance of 10% is
+              included.
+            </p>
+          </div>
+          <div class="calc reveal" role="group" aria-label="Order estimator">
+            <div class="calc-grid">
+              <div class="field">
+                <label for="c-area">Area to cover (m²)</label>
+                <input
+                  id="c-area"
+                  type="number"
+                  min="1"
+                  value="1000"
+                  inputmode="numeric"
+                />
+              </div>
+              <div class="field">
+                <label for="c-grade">Fabric grade</label>
+                <select id="c-grade">
+                  <option value="2600" data-name="Barrier 90">
+                    Barrier 90 — ₹2,600/roll
+                  </option>
+                  <option value="2600" data-name="Barrier 110" selected>
+                    Barrier 110 — ₹2,600/roll
+                  </option>
+                  <option value="2600" data-name="Barrier 130">
+                    Barrier 130 — ₹2,600/roll
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="calc-out">
+              <div class="cell">
+                <div class="v" id="o-rolls">11</div>
+                <div class="k">Rolls (2×50 m)</div>
+              </div>
+              <div class="cell">
+                <div class="v" id="o-pins">8</div>
+                <div class="k">Pin cartons</div>
+              </div>
+              <div class="cell">
+                <div class="v" id="o-cost">₹36,084</div>
+                <div class="k">Est. materials</div>
+              </div>
+            </div>
+            <p class="calc-note">
+              Estimates only — final pricing follows tier discounts and freight.
+              Send this via the quote form and we'll firm it up.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- pricing -->
+      <section id="pricing">
+        <div class="sec-head reveal">
+          <h2 class="title">Trade pricing that <em>rewards volume.</em></h2>
+          <p>
+            Tiers apply automatically per order on Barrier fabrics. Registered
+            trade accounts also get 30-day credit terms after their third order.
+          </p>
+        </div>
+        <div class="reveal" style="overflow-x: auto">
+          <table class="tiers">
+            <thead>
+              <tr>
+                <th>Tier</th>
+                <th>Order volume</th>
+                <th>Discount</th>
+                <th>Freight</th>
+                <th>Terms</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Site</td>
+                <td><span class="mono">1 – 9 rolls</span></td>
+                <td>List price</td>
+                <td>To pay</td>
+                <td>Advance</td>
+              </tr>
+              <tr>
+                <td>Crew</td>
+                <td><span class="mono">10 – 29 rolls</span></td>
+                <td class="save">6% off</td>
+                <td>To pay</td>
+                <td>Advance</td>
+              </tr>
+              <tr>
+                <td>Contract</td>
+                <td><span class="mono">30 – 99 rolls</span></td>
+                <td class="save">12% off</td>
+                <td>Free within Punjab, India</td>
+                <td>50% advance</td>
+              </tr>
+              <tr>
+                <td>Distribution</td>
+                <td><span class="mono">100+ rolls</span></td>
+                <td class="save">Negotiated</td>
+                <td>Free, South India</td>
+                <td>30-day credit*</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="calc-note" style="margin-top: 18px">
+            *Credit terms after account verification and third completed order.
+            GST invoice on everything.
+          </p>
+        </div>
+      </section>
+
+      <!-- story -->
+      <section id="story">
+        <div class="sec-head reveal">
+          <h2 class="title">Our <em>story.</em></h2>
+        </div>
+        <div class="story">
+          <div class="reveal">
+            <blockquote>
+              We started Verdant Agro after watching one too many landscaping
+              jobs fail on fabric that weighed 70 GSM and claimed 110. The
+              material under a project is the easiest place to cut a corner —
+              and the most expensive place to <em>find out later.</em>
+            </blockquote>
+            <p class="attr">Founding team — Verdant Agro, Punjab</p>
+          </div>
+          <div class="story-facts reveal">
+            <div class="fact">
+              <h4>Built in Punjab</h4>
+              <p>
+                Warehoused in Punjab, supplying trade buyers across North India.
+              </p>
+            </div>
+            <div class="fact">
+              <h4>Trade-only focus</h4>
+              <p>
+                We don't chase retail. Our pricing, pack sizes and dispatch are
+                built for people who buy in volume.
+              </p>
+            </div>
+            <div class="fact">
+              <h4>Specs you can audit</h4>
+              <p>
+                Every consignment ships with its batch test certificate. Weigh
+                it yourself — we encourage it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="sec-head reveal">
+          <h2 class="title">Asked <em>often.</em></h2>
+        </div>
+        <div class="faq reveal">
+          <div class="q">
+            <button aria-expanded="false">
+              What's the minimum order for trade pricing?
+            </button>
+            <div class="a">
+              <p>
+                Ten rolls opens the Crew tier at 6% off. Below that you can
+                still buy at list price with advance payment — useful for
+                trialling the fabric on one site before committing.
+              </p>
+            </div>
+          </div>
+          <div class="q">
+            <button aria-expanded="false">
+              Do you deliver outside Punjab, India?
+            </button>
+            <div class="a">
+              <p>
+                Yes. We dispatch across South India. Freight is free within
+                Punjab, India from the Contract tier, and free across South
+                India at Distribution volume. Elsewhere, freight is billed at
+                cost with the invoice.
+              </p>
+            </div>
+          </div>
+          <div class="q">
+            <button aria-expanded="false">
+              How do I verify the GSM myself?
+            </button>
+            <div class="a">
+              <p>
+                Cut a 10 cm × 10 cm square, weigh it in grams, multiply by 100.
+                A true 110 GSM fabric sample weighs about 1.1 g. Every
+                consignment also carries its batch test certificate.
+              </p>
+            </div>
+          </div>
+          <div class="q">
+            <button aria-expanded="false">
+              Can you slit rolls to a custom width?
+            </button>
+            <div class="a">
+              <p>
+                Yes — any width from 0.6 m to 4 m, minimum 20 rolls per width.
+                Custom widths add two working days to dispatch.
+              </p>
+            </div>
+          </div>
+          <div class="q">
+            <button aria-expanded="false">
+              What happens if a roll fails on site?
+            </button>
+            <div class="a">
+              <p>
+                Send us a photo, the batch number printed on the core, and the
+                site details. Failures on GSM or tearing within the covered
+                period are replaced on the next dispatch, freight on us.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- quote -->
+      <div class="quote" id="quote">
+        <div class="quote-inner">
+          <div class="quote-copy reveal">
+            <p class="mono">Request a quote</p>
+            <h2 class="title">
+              Tell us the site.<br /><em>We'll price the ground.</em>
+            </h2>
+            <p>
+              Share your volume and location and a trade specialist replies
+              within one working day with firm pricing, freight and a dispatch
+              date.
+            </p>
+            <div class="contact-lines">
+              <div>
+                <span class="k">Phone</span
+                ><span class="v"
+                  >+91 83402 17835<br />+91 97781 55944<br />+91 96791 11932<br />+91
+                  80752 73977</span
+                >
+              </div>
+              <div>
+                <span class="k">Email</span
+                ><span class="v">trade@verdantagro.in</span>
+              </div>
+              <div>
+                <span class="k">Warehouse</span
+                ><span class="v">Punjab, India</span>
+              </div>
+              <div>
+                <span class="k">Hours</span
+                ><span class="v">Mon–Sat, 9 am – 6 pm</span>
+              </div>
+            </div>
+          </div>
+          <form class="qf reveal" id="quoteForm" novalidate>
+            <div class="row">
+              <div>
+                <label
+                  class="mono"
+                  for="f-name"
+                  style="
+                    display: block;
+                    color: var(--cream-dim);
+                    margin-bottom: 10px;
+                    font-size: 11px;
+                  "
+                  >Your name</label
+                ><input
+                  id="f-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  class="mono"
+                  for="f-co"
+                  style="
+                    display: block;
+                    color: var(--cream-dim);
+                    margin-bottom: 10px;
+                    font-size: 11px;
+                  "
+                  >Company</label
+                ><input
+                  id="f-co"
+                  name="company"
+                  type="text"
+                  autocomplete="organization"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label
+                  class="mono"
+                  for="f-phone"
+                  style="
+                    display: block;
+                    color: var(--cream-dim);
+                    margin-bottom: 10px;
+                    font-size: 11px;
+                  "
+                  >Phone</label
+                ><input
+                  id="f-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  class="mono"
+                  for="f-email"
+                  style="
+                    display: block;
+                    color: var(--cream-dim);
+                    margin-bottom: 10px;
+                    font-size: 11px;
+                  "
+                  >Email</label
+                ><input
+                  id="f-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row full">
+              <div>
+                <label
+                  class="mono"
+                  for="f-city"
+                  style="
+                    display: block;
+                    color: var(--cream-dim);
+                    margin-bottom: 10px;
+                    font-size: 11px;
+                  "
+                  >Delivery city</label
+                ><input id="f-city" name="city" type="text" required />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label
+                  class="mono"
+                  for="f-mat"
+                  style="
+                    display: block;
+                    color: var(--cream-dim);
+                    margin-bottom: 10px;
+                    font-size: 11px;
+                  "
+                  >Material</label
+                >
+                <select id="f-mat" name="material">
+                  <option>Barrier 90</option>
+                  <option selected>Barrier 110</option>
+                  <option>Barrier 130</option>
+                  <option>Ground pins</option>
+                  <option>Cut-to-width</option>
+                  <option>Mulch film</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  class="mono"
+                  for="f-vol"
+                  style="
+                    display: block;
+                    color: var(--cream-dim);
+                    margin-bottom: 10px;
+                    font-size: 11px;
+                  "
+                  >Approx. volume (rolls)</label
+                ><input
+                  id="f-vol"
+                  name="volume"
+                  type="number"
+                  min="1"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row full">
+              <div>
+                <label
+                  class="mono"
+                  for="f-notes"
+                  style="
+                    display: block;
+                    color: var(--cream-dim);
+                    margin-bottom: 10px;
+                    font-size: 11px;
+                  "
+                  >Anything else</label
+                ><textarea
+                  id="f-notes"
+                  name="notes"
+                  placeholder="Site type, timeline, custom widths…"
+                ></textarea
+                ><input id="f-message" name="message" type="hidden" />
+              </div>
+            </div>
+            <button class="btn btn-solid" type="submit">
+              Send quote request
+            </button>
+            <p class="msg" id="formMsg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <div>
+          <p class="wordmark">Verdant Agro.</p>
+          <p class="tag">
+            Premium outdoor materials, thoughtfully sourced for Punjab, India.
+          </p>
+        </div>
+        <div>
+          <h5>Materials</h5>
+          <ul>
+            <li><a href="#materials">Barrier 90</a></li>
+            <li><a href="#materials">Barrier 110</a></li>
+            <li><a href="#materials">Barrier 130</a></li>
+            <li><a href="#materials">Ground pins</a></li>
+            <li><a href="#materials">Mulch film</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#approach">Our approach</a></li>
+            <li><a href="#story">Our story</a></li>
+            <li><a href="#pricing">Trade pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Trade desk</h5>
+          <ul>
+            <li><a href="tel:+918340217835">+91 83402 17835</a></li>
+            <li><a href="tel:+919778155944">+91 97781 55944</a></li>
+            <li><a href="tel:+919679111932">+91 96791 11932</a></li>
+            <li><a href="tel:+918075273977">+91 80752 73977</a></li>
+            <li>
+              <a href="mailto:trade@verdantagro.in">trade@verdantagro.in</a>
+            </li>
+            <li>
+              <a
+                class="social-link"
+                href="https://www.instagram.com/verdant.agro?stkn=MTd2bDB4cWRrOWNvYg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r=".75"
+                    fill="currentColor"
+                    stroke="none"
+                  ></circle></svg
+                ><span>Instagram</span></a
+              >
+            </li>
+            <li><a href="#quote">Request a quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© 2026 Verdant Agro · Punjab, India</span>
+        <span>GSTIN available on invoice</span>
+      </div>
+    </footer>
+
+    <script>
+      emailjs.init({ publicKey: "AlRCDY2cp5MFRtMdz" });
+
+      // ----- sticky header shadow -----
+      const hdr = document.getElementById("hdr");
+      addEventListener(
+        "scroll",
+        () => hdr.classList.toggle("scrolled", scrollY > 8),
+        { passive: true },
+      );
+
+      // ----- mobile menu -----
+      const burger = document.getElementById("burger");
+      const navlinks = document.getElementById("navlinks");
+      burger.addEventListener("click", () => {
+        const open = navlinks.classList.toggle("show");
+        burger.setAttribute("aria-expanded", open);
+        burger.textContent = open ? "Close" : "Menu";
+      });
+      navlinks.addEventListener("click", (e) => {
+        if (e.target.tagName === "A" && navlinks.classList.contains("show"))
+          burger.click();
+      });
+
+      // ----- scroll reveal -----
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((en) => {
+            if (en.isIntersecting) {
+              en.target.classList.add("in");
+              io.unobserve(en.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // ----- product video modal -----
+      const videoModal = document.getElementById("videoModal");
+      const videoOpen = document.getElementById("videoOpen");
+      const videoClose = document.getElementById("videoClose");
+      const productVideo = videoModal.querySelector("video");
+      function closeVideo() {
+        videoModal.classList.remove("open");
+        videoModal.setAttribute("aria-hidden", "true");
+        productVideo.pause();
+        productVideo.currentTime = 0;
+        videoOpen.focus();
+      }
+      videoOpen.addEventListener("click", () => {
+        videoModal.classList.add("open");
+        videoModal.setAttribute("aria-hidden", "false");
+        videoClose.focus();
+      });
+      videoClose.addEventListener("click", closeVideo);
+      videoModal
+        .querySelector("[data-video-close]")
+        .addEventListener("click", closeVideo);
+      addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && videoModal.classList.contains("open"))
+          closeVideo();
+      });
+
+      // ----- calculator -----
+      const ROLL_AREA = 100; // 2m x 50m
+      const ROLL_PRICE = 2600;
+      const PIN_COVER = 150; // m² per carton
+      const PIN_PRICE = 1150;
+      const OVERLAP = 1.1;
+      const areaEl = document.getElementById("c-area");
+      const gradeEl = document.getElementById("c-grade");
+      const inr = (n) => "₹" + Math.round(n).toLocaleString("en-IN");
+
+      function tierDiscount(rolls) {
+        if (rolls >= 100) return 0.15;
+        if (rolls >= 30) return 0.12;
+        if (rolls >= 10) return 0.06;
+        return 0;
+      }
+      function calc() {
+        const area = Math.max(0, parseFloat(areaEl.value) || 0);
+        const effective = area * OVERLAP;
+        const rolls = Math.ceil(effective / ROLL_AREA);
+        const pins = Math.ceil(effective / PIN_COVER);
+        const d = tierDiscount(rolls);
+        const fabric = rolls * ROLL_PRICE * (1 - d);
+        const cost = fabric + pins * PIN_PRICE;
+        document.getElementById("o-rolls").textContent = rolls;
+        document.getElementById("o-pins").textContent = pins;
+        document.getElementById("o-cost").textContent = area ? inr(cost) : "—";
+      }
+      areaEl.addEventListener("input", calc);
+      gradeEl.addEventListener("change", calc);
+      calc();
+
+      // ----- FAQ accordion -----
+      document.querySelectorAll(".q button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const q = btn.parentElement;
+          const a = q.querySelector(".a");
+          const open = q.classList.toggle("open");
+          btn.setAttribute("aria-expanded", open);
+          a.style.maxHeight = open ? a.scrollHeight + "px" : 0;
+        });
+      });
+
+      // ----- quote form -----
+      document
+        .getElementById("quoteForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const form = e.target;
+          const msg = document.getElementById("formMsg");
+          const submit = form.querySelector('button[type="submit"]');
+          let valid = true;
+          form.querySelectorAll("[required]").forEach((f) => {
+            const bad = !f.value.trim();
+            f.classList.toggle("err", bad);
+            if (bad) valid = false;
+          });
+          if (!valid) {
+            msg.textContent =
+              "Please complete the required fields before sending your request.";
+            return;
+          }
+          submit.disabled = true;
+          submit.textContent = "Sending...";
+          msg.textContent = "";
+          try {
+            form.message.value = form.notes.value;
+            await emailjs.sendForm("service_xycy49d", "template_8icta2l", form);
+            const name = form.name.value.trim().split(" ")[0];
+            msg.textContent = `Thanks, ${name} — your request has been sent. We will reply within one working day.`;
+            form.reset();
+          } catch (error) {
+            console.error("EmailJS error:", error);
+            msg.textContent =
+              error?.text ||
+              "We could not send your request. Please call us or try again.";
+          } finally {
+            submit.disabled = false;
+            submit.textContent = "Send quote request";
+          }
+        });
+    </script>
+  </body>
+</html>
